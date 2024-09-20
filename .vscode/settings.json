@@ -29,5 +29,8 @@
     },
     "[python]": {
         "editor.defaultFormatter": "ms-python.black-formatter"
-    }
+    },
+    "python.analysis.extraPaths": [
+        "./deps/binding/Python"
+    ]
 }

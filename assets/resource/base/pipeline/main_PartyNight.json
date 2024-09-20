@@ -1,0 +1,149 @@
+{
+    "enter_activity_main": {
+        "recognition": "TemplateMatch",
+        "template": "partynight_main.png",
+        "action": "Click",
+        "next": [
+            "click_PartyNight"
+        ]
+    },
+    "click_PartyNight": {
+        "recognition": "OCR",
+        "expected": "派對前夜",
+        "action": "Click",
+        "post_delay": 500,
+        "next": [
+            "start_PartyNight"
+        ]
+    },
+    "start_PartyNight": {
+        "recognition": "TemplateMatch",
+        "template": "partynight_start.png",
+        "post_delay": 500,
+        "roi": [
+            906,
+            573,
+            373,
+            146
+        ],
+        "action": "Click",
+        "next": [
+            "confirm_PartyNight"
+        ]
+    },
+    "confirm_PartyNight": {
+        "recognition": "OCR",
+        "expected": "開始",
+        "action": "Click",
+        "post_delay": 3000,
+        "next": [
+            "select_arthur_PartyNight"
+        ]
+    },
+    "select_arthur_PartyNight": {
+        "recognition": "OCR",
+        "roi": [
+            938,
+            307,
+            101,
+            34
+        ],
+        "expected": "歌姬亞瑟",
+        "action": "Click",
+        "post_delay": 500,
+        "next": [
+            "skip_PartyNight"
+        ]
+    },
+    "skip_PartyNight": {
+        "recognition": "OCR",
+        "expected": "一個閃亮的身影",
+        "action": "Click",
+        "target": [
+            1217,
+            28,
+            1,
+            1
+        ],
+        "post_delay": 500,
+        "next": [
+            "confirm_skip"
+        ]
+    },
+    "skip": {
+        "recognition": "TemplateMatch",
+        "roi": [
+            969,
+            0,
+            311,
+            167
+        ],
+        "template": "skip.png",
+        "action": "Click",
+        "next": [
+            "confirm_skip"
+        ]
+    },
+    "confirm_skip": {
+        "recognition": "OCR",
+        "roi": [
+            310,
+            564,
+            670,
+            156
+        ],
+        "expected": "跳過",
+        "action": "Click",
+        "next": [
+            "activity_InPartyNight",
+            "finalBattle_PartyNight"
+        ]
+    },
+    "finalBattle_PartyNight": {
+        "recognition": "TemplateMatch",
+        "template": "准备作战.png",
+        "roi": [
+            816,
+            447,
+            464,
+            273
+        ],
+        "action": "Click",
+        "post_wait_freezes": 1500,
+        "next": [
+            "autoBattle_PartyNight",
+            "alreadyAuto_PartyNight"
+        ]
+    },
+    "autoBattle_PartyNight": {
+        "recognition": "TemplateMatch",
+        "template": "auto.png",
+        "roi": [
+            1004,
+            0,
+            276,
+            156
+        ],
+        "action": "Click",
+        "next": [
+            "return_to_main"
+        ]
+    },
+    "alreadyAuto_PartyNight": {
+        "recognition": "TemplateMatch",
+        "template": "already_auto.png",
+        "roi": [
+            1004,
+            0,
+            276,
+            156
+        ],
+        "action": "DoNothing",
+        "post_delay": 5000,
+        "next": [
+            "return_to_main",
+            "press_confirm_button",
+            "alreadyAuto_PartyNight"
+        ]
+    }
+}

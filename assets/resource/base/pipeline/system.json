@@ -1,0 +1,53 @@
+{
+    "return_to_main": {
+        "recognition": "OCR",
+        "expected": "下一步",
+        "action": "Click",
+        "next": [
+            "press_confirm_button"
+        ]
+    },
+    "press_confirm_button": {
+        "recognition": "OCR",
+        "expected": "確定",
+        "pre_wait_freezes": 500,
+        "action": "Click",
+        "next": [
+            "return_homepage"
+        ]
+    },
+    "return_homepage": {
+        "recognition": "TemplateMatch",
+        "roi": [
+            0,
+            0,
+            485,
+            150
+        ],
+        "pre_wait_freezes": 500,
+        "template": "home.png",
+        "action": "Click",
+        "next": [
+            "press_accept_button",
+            "end_up_all"
+        ]
+    },
+    "press_accept_button": {
+        "recognition": "OCR",
+        "pre_wait_freezes": 1500,
+        "expected": "領取",
+        "action": "Click",
+        "next": [
+            "end_up_all"
+        ]
+    },
+    "end_up_all": {
+        "action": "Click",
+        "target": [
+            0,
+            0,
+            0,
+            0
+        ]
+    }
+}

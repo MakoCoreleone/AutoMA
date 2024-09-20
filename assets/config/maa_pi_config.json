@@ -1,0 +1,33 @@
+{
+    "controller": {
+        "name": "桌面端",
+        "type": "Win32"
+    },
+    "adb": {
+        "adb_path": "E:/llyx/Games/MuMu Player 12/shell/adb.exe",
+        "address": "127.0.0.1:16384",
+        "config": {
+            "extras": {
+                "mumu": {
+                    "enable": true,
+                    "index": 0,
+                    "path": "E:/llyx/Games/MuMu Player 12"
+                }
+            }
+        }
+    },
+    "resource": "官服",
+    "task": [
+        {
+            "name": "普通任务",
+            "option": []
+        },
+        {
+            "name": "普通任务",
+            "option": []
+        }
+    ],
+    "win32": {
+        "hwnd": "0000000000010a24"
+    }
+}

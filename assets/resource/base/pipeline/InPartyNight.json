@@ -1,0 +1,234 @@
+{
+    "activity_InPartyNight": {
+        "pre_wait_freezes": 1500,
+        "next": [
+            "confirmItem_InPartyNight",
+            "selectBuff_InPartyNight",
+            "checkNullDice_InPartyNight",
+            "checkRedDice_InPartyNight",
+            "useItemForFa_InPartyNight",
+            "useNormalItem_InPartyNight",
+            "dropDice_InPartyNight",
+            "final_InPartyNight"
+        ]
+    },
+    "checkNullDice_InPartyNight": {
+        "recognition": "TemplateMatch",
+        "roi": [
+            1039,
+            470,
+            241,
+            150
+        ],
+        "template": "InPartyNight\\空骰子.png",
+        "next": [
+            "findAccelerate_InPartyNight",
+            "findCheat_InPartyNight",
+            "checkRedDice_InPartyNight",
+            "useItemForFa_InPartyNight",
+            "useNormalItem_InPartyNight",
+            "dropDice_InPartyNight",
+            "finalBattle_PartyNight"
+        ]
+    },
+    "checkRedDice_InPartyNight": {
+        "recognition": "TemplateMatch",
+        "roi": [
+            1039,
+            470,
+            241,
+            150
+        ],
+        "template": "InPartyNight\\红骰子.png",
+        "next": [
+            "findCheat_InPartyNight",
+            "useItemForFa_InPartyNight",
+            "useNormalItem_InPartyNight",
+            "dropDice_InPartyNight"
+        ]
+    },
+    "findAccelerate_InPartyNight": {
+        "recognition": "TemplateMatch",
+        "roi": [
+            155,
+            435,
+            797,
+            285
+        ],
+        "template": "InPartyNight\\加骰子.png",
+        "threshold": 0.9,
+        "action": "Click",
+        "next": [
+            "clickSelf_InPartyNight"
+        ]
+    },
+    "clickSelf_InPartyNight": {
+        "recognition": "TemplateMatch",
+        "roi": [
+            0,
+            372,
+            356,
+            348
+        ],
+        "template": "InPartyNight\\点自己.png",
+        "action": "Click",
+        "post_delay": 1000,
+        "next": [
+            "confirmItem_InPartyNight",
+            "checkNullDice_InPartyNight"
+        ]
+    },
+    "findCheat_InPartyNight": {
+        "recognition": "TemplateMatch",
+        "roi": [
+            155,
+            435,
+            797,
+            285
+        ],
+        "template": "InPartyNight\\神行卡.png",
+        "action": "Click",
+        "next": [
+            "confirmItem_InPartyNight"
+        ]
+    },
+    "useItemForFa_InPartyNight": {
+        "recognition": "TemplateMatch",
+        "roi": [
+            155,
+            435,
+            797,
+            285
+        ],
+        "template": "InPartyNight\\法姐骰子.png",
+        "action": "Click",
+        "threshold": 0.9,
+        "post_delay": 500,
+        "next": [
+            "selectFa_InPartyNight"
+        ]
+    },
+    "selectFa_InPartyNight": {
+        "recognition": "TemplateMatch",
+        "roi": [
+            0,
+            0,
+            429,
+            245
+        ],
+        "template": "InPartyNight\\法姐.png",
+        "action": "Click",
+        "post_delay": 500,
+        "next": [
+            "confirmItem_InPartyNight",
+            "useItemForFa_InPartyNight",
+            "useNormalItem_InPartyNight",
+            "dropDice_InPartyNight"
+        ]
+    },
+    "useNormalItem_InPartyNight": {
+        "recognition": "TemplateMatch",
+        "template": [
+            "InPartyNight\\道具卡1.png",
+            "InPartyNight\\道具卡2.png",
+            "InPartyNight\\道具卡3.png",
+            "InPartyNight\\道具卡4.png"
+        ],
+        "roi": [
+            155,
+            435,
+            797,
+            285
+        ],
+        "action": "Click",
+        "next": [
+            "confirmItem_InPartyNight"
+        ]
+    },
+    "dropDice_InPartyNight": {
+        "recognition": "TemplateMatch",
+        "roi": [
+            963,
+            412,
+            317,
+            308
+        ],
+        "template": "InPartyNight\\掷骰子.png",
+        "action": "Click",
+        "next": [
+            "activity_InPartyNight"
+        ]
+    },
+    "selectBuff_InPartyNight": {
+        "recognition": "TemplateMatch",
+        "roi": [
+            623,
+            284,
+            228,
+            221
+        ],
+        "template": "InPartyNight\\buffcheck.png",
+        "next": [
+            "selectBuff2_InPartyNight",
+            "selectBuff3_InPartyNight"
+        ]
+    },
+    "selectBuff2_InPartyNight": {
+        "recognition": "OCR",
+        "roi": [
+            163,
+            59,
+            932,
+            463
+        ],
+        "expected": [
+            "開始時",
+            "火力"
+        ],
+        "action": "Click",
+        "post_delay": 500,
+        "next": [
+            "activity_InPartyNight"
+        ]
+    },
+    "selectBuff3_InPartyNight": {
+        "action": "Click",
+        "target": [
+            285,
+            163,
+            266,
+            84
+        ],
+        "post_delay": 500,
+        "next": [
+            "activity_InPartyNight"
+        ]
+    },
+    "confirmItem_InPartyNight": {
+        "recognition": "TemplateMatch",
+        "roi": [
+            155,
+            435,
+            797,
+            285
+        ],
+        "template": "InPartyNight\\使用道具.png",
+        "post_delay": 500,
+        "action": "Click",
+        "next": [
+            "activity_InPartyNight"
+        ]
+    },
+    "断网了": {
+        "next": [
+            "activity_InPartyNight"
+        ]
+    },
+    "final_InPartyNight": {
+        "recognition": "TemplateMatch",
+        "template": "skip.png",
+        "next": [
+            "skip"
+        ]
+    }
+}
