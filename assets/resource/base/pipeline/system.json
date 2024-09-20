@@ -1,19 +1,37 @@
 {
-    "return_to_main": {
-        "recognition": "OCR",
-        "expected": "下一步",
-        "action": "Click",
-        "next": [
-            "press_confirm_button"
-        ]
-    },
     "press_confirm_button": {
         "recognition": "OCR",
         "expected": "確定",
-        "pre_wait_freezes": 500,
+        "timeout": 600000,
+        "post_wait_freezes": 500,
         "action": "Click",
         "next": [
             "return_homepage"
+        ]
+    },
+    "return_to_main": {
+        "recognition": "OCR",
+        "expected": "下一步",
+        "pre_delay": 2000,
+        "action": "Click",
+        "next": [
+            "accept_reward"
+        ]
+    },
+    "accept_reward": {
+        "recognition": "OCR",
+        "expected": "恭喜",
+        "action": "Click",
+        "target": [
+            624,
+            457,
+            1,
+            1
+        ],
+        "pre_delay": 1500,
+        "next": [
+            "return_homepage",
+            "press_accept_button"
         ]
     },
     "return_homepage": {
@@ -24,7 +42,7 @@
             485,
             150
         ],
-        "pre_wait_freezes": 500,
+        "pre_delay": 1000,
         "template": "home.png",
         "action": "Click",
         "next": [
@@ -34,7 +52,8 @@
     },
     "press_accept_button": {
         "recognition": "OCR",
-        "pre_wait_freezes": 1500,
+        "pre_delay": 1500,
+        "post_delay": 500,
         "expected": "領取",
         "action": "Click",
         "next": [

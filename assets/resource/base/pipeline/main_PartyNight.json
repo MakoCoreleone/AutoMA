@@ -141,7 +141,6 @@
         "action": "DoNothing",
         "post_delay": 5000,
         "next": [
-            "return_to_main",
             "press_confirm_button",
             "alreadyAuto_PartyNight"
         ]

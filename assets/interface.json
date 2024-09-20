@@ -7,7 +7,7 @@
     ],
     "resource": [
         {
-            "name": "官服",
+            "name": "台服",
             "path": [
                 "{PROJECT_DIR}/resource/base"
             ]
@@ -15,7 +15,7 @@
     ],
     "task": [
         {
-            "name": "刷派对前夜 （务必解锁派对前夜功能后回到主界面开始运行）",
+            "name": "刷派对前夜 （务必解锁派对前夜功能后回到主界面开始运行,使用前请看readme!）",
             "entry": "enter_activity_main"
         }
     ]
