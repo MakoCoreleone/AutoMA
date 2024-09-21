@@ -31,7 +31,9 @@
         "pre_delay": 1500,
         "next": [
             "return_homepage",
-            "press_accept_button"
+            "press_accept_button",
+            "GetReward",
+            "check_homepage"
         ]
     },
     "return_homepage": {

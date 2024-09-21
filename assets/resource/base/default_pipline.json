@@ -1,0 +1,13 @@
+{
+    "Default": {
+        "rate_limit": 2000,
+        "interrupt": [
+            "Reconnect_game",
+            "check_homepage"
+        ]
+    },
+    "TemplateMatch": {
+        "recognition": "TemplateMatch",
+        "threshold": 0.85
+    }
+}

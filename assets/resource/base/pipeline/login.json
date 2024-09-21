@@ -1,0 +1,144 @@
+{
+    "Start_game": {
+        "action": "StartApp",
+        "package": "tw.com.iwplay.ma/com.unity3d.player.MAUnityPlayerActivity",
+        "next": [
+            "CloseNews_game",
+            "CloseAds_game",
+            "TouchToContinue_game",
+            "Resume_activity",
+            "check_homepage"
+        ]
+    },
+    "CloseAds_game": {
+        "recognition": "TemplateMatch",
+        "roi": [
+            542,
+            0,
+            738,
+            462
+        ],
+        "template": "closeAds.png",
+        "pre_delay": 1500,
+        "action": "Click",
+        "next": [
+            "Start_game"
+        ]
+    },
+    "CloseNews_game": {
+        "recognition": "TemplateMatch",
+        "roi": [
+            428,
+            510,
+            430,
+            210
+        ],
+        "template": "close_btn.png",
+        "pre_delay": 500,
+        "action": "Click",
+        "next": [
+            "TouchToContinue_game",
+            "Login_game",
+            "accept_reward",
+            "Start_game"
+        ]
+    },
+    "TouchToContinue_game": {
+        "recognition": "OCR",
+        "roi": [
+            328,
+            384,
+            628,
+            289
+        ],
+        "expected": "TOUCH TO CONTINUE",
+        "action": "Click",
+        "pre_delay": 500,
+        "next": [
+            "Start_game"
+        ]
+    },
+    "Login_game": {
+        "recognition": "TemplateMatch",
+        "roi": [
+            319,
+            317,
+            666,
+            213
+        ],
+        "template": "login_btn.png",
+        "action": "Click",
+        "pre_delay": 500,
+        "next": [
+            "Start_game"
+        ]
+    },
+    "Reconnect_game": {
+        "recognition": "OCR",
+        "roi": [
+            284,
+            172,
+            707,
+            342
+        ],
+        "expected": "重新登錄!(0)",
+        "next": [
+            "CloseNews_game",
+            "Start_game"
+        ]
+    },
+    "GetReward": {
+        "recognition": "TemplateMatch",
+        "roi": [
+            257,
+            454,
+            773,
+            266
+        ],
+        "template": "getreward.png",
+        "action": "Click",
+        "pre_delay": 500,
+        "next": [
+            "Start_game"
+        ]
+    },
+    "check_homepage": {
+        "recognition": "TemplateMatch",
+        "roi": [
+            323,
+            147,
+            607,
+            454
+        ],
+        "template": "check_homepage.png"
+    },
+    "Resume_activity": {
+        "recognition": "OCR",
+        "expected": [
+            "尚未結束"
+        ],
+        "action": "Click",
+        "target": [
+            729,
+            648,
+            148,
+            28
+        ],
+        "post_delay": 3000,
+        "next": [
+            "GoBack_InPartyNight"
+        ]
+    },
+    "GoBack_PartyNight": {
+        "enabled": true,
+        "next": [
+            "enter_activity_main"
+        ]
+    },
+    "GoBack_InPartyNight": {
+        "enabled": true,
+        "next": [
+            "activity_InPartyNight"
+        ]
+    }
+}

@@ -1,6 +1,10 @@
 {
     "activity_InPartyNight": {
         "pre_wait_freezes": 1500,
+        "interrupt": [
+            "Reconnect_game",
+            "GoBack_PartyNight"
+        ],
         "next": [
             "confirmItem_InPartyNight",
             "selectBuff_InPartyNight",
@@ -215,11 +219,6 @@
         "template": "InPartyNight\\使用道具.png",
         "post_delay": 500,
         "action": "Click",
-        "next": [
-            "activity_InPartyNight"
-        ]
-    },
-    "断网了": {
         "next": [
             "activity_InPartyNight"
         ]

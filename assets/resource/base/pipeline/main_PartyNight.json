@@ -1,14 +1,43 @@
 {
     "enter_activity_main": {
         "recognition": "TemplateMatch",
+        "timeout": 60000,
         "template": "partynight_main.png",
         "action": "Click",
+        "next": [
+            "check_main_PartyNight",
+            "check_InPartyNight"
+        ]
+    },
+    "check_main_PartyNight": {
+        "recognition": "OCR",
+        "expected": "時鐘",
+        "roi": [
+            376,
+            403,
+            561,
+            310
+        ],
         "next": [
             "click_PartyNight"
         ]
     },
+    "check_InPartyNight": {
+        "recognition": "OCR",
+        "expected": "回合",
+        "roi": [
+            457,
+            0,
+            381,
+            133
+        ],
+        "next": [
+            "activity_InPartyNight"
+        ]
+    },
     "click_PartyNight": {
         "recognition": "OCR",
+        "timeout": 30000,
         "expected": "派對前夜",
         "action": "Click",
         "post_delay": 500,
