@@ -30,6 +30,7 @@
             1
         ],
         "pre_delay": 1500,
+        "post_delay": 2500,
         "next": [
             "return_homepage",
             "press_accept_button",
@@ -51,7 +52,8 @@
         "action": "Click",
         "next": [
             "press_accept_button",
-            "check_homepage"
+            "check_homepage",
+            "return_homepage"
         ]
     },
     "press_accept_button": {

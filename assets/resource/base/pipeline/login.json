@@ -81,7 +81,7 @@
             707,
             342
         ],
-        "expected": "重新登錄!(0)",
+        "expected": "網路連接",
         "next": [
             "CloseNews_game",
             "Start_game"
@@ -110,7 +110,8 @@
             607,
             454
         ],
-        "template": "check_homepage.png"
+        "template": "check_homepage.png",
+        "next": "end_up_all"
     },
     "Resume_activity": {
         "recognition": "OCR",
