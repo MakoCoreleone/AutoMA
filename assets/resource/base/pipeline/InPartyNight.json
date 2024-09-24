@@ -79,7 +79,8 @@
         "post_delay": 1000,
         "next": [
             "confirmItem_InPartyNight",
-            "checkNullDice_InPartyNight"
+            "checkNullDice_InPartyNight",
+            "dropDice_InPartyNight"
         ]
     },
     "findCheat_InPartyNight": {
@@ -104,7 +105,10 @@
             797,
             285
         ],
-        "template": "InPartyNight\\法姐骰子.png",
+        "template": [
+            "InPartyNight\\法姐骰子.png",
+            "InPartyNight\\法姐箭头.png"
+        ],
         "action": "Click",
         "threshold": 0.9,
         "post_delay": 500,
@@ -136,7 +140,8 @@
             "InPartyNight\\道具卡1.png",
             "InPartyNight\\道具卡2.png",
             "InPartyNight\\道具卡3.png",
-            "InPartyNight\\道具卡4.png"
+            "InPartyNight\\道具卡4.png",
+            "InPartyNight\\道具卡5.png"
         ],
         "roi": [
             155,

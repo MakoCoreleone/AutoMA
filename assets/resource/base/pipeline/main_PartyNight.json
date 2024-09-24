@@ -114,15 +114,16 @@
         ]
     },
     "confirm_skip": {
-        "recognition": "OCR",
+        "recognition": "TemplateMatch",
         "roi": [
             310,
             564,
             670,
             156
         ],
-        "expected": "跳過",
+        "template": "confirm_skip.png",
         "action": "Click",
+        "threshold": 0.9,
         "next": [
             "activity_InPartyNight",
             "finalBattle_PartyNight"
@@ -168,7 +169,8 @@
             156
         ],
         "action": "DoNothing",
-        "post_delay": 5000,
+        "timeout": 600000,
+        "post_delay": 15000,
         "next": [
             "press_confirm_button",
             "alreadyAuto_PartyNight"

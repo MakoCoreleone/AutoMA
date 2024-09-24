@@ -3,7 +3,7 @@
         "recognition": "OCR",
         "expected": "確定",
         "timeout": 600000,
-        "post_wait_freezes": 500,
+        "post_wait_freezes": 2000,
         "action": "Click",
         "next": [
             "return_homepage"
@@ -15,7 +15,8 @@
         "pre_delay": 2000,
         "action": "Click",
         "next": [
-            "accept_reward"
+            "accept_reward",
+            "press_confirm_button"
         ]
     },
     "accept_reward": {
@@ -44,12 +45,13 @@
             485,
             150
         ],
+        "interrupt": "return_to_main",
         "pre_delay": 1000,
         "template": "home.png",
         "action": "Click",
         "next": [
             "press_accept_button",
-            "end_up_all"
+            "check_homepage"
         ]
     },
     "press_accept_button": {
