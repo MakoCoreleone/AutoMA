@@ -94,7 +94,8 @@
         "template": "InPartyNight\\神行卡.png",
         "action": "Click",
         "next": [
-            "confirmItem_InPartyNight"
+            "confirmItem_InPartyNight",
+            "dropDice_InPartyNight"
         ]
     },
     "useItemForFa_InPartyNight": {
@@ -151,7 +152,8 @@
         ],
         "action": "Click",
         "next": [
-            "confirmItem_InPartyNight"
+            "confirmItem_InPartyNight",
+            "dropDice_InPartyNight"
         ]
     },
     "dropDice_InPartyNight": {

@@ -38,7 +38,7 @@
     "click_PartyNight": {
         "recognition": "OCR",
         "timeout": 30000,
-        "expected": "派對前夜",
+        "expected": "前夜",
         "action": "Click",
         "post_delay": 500,
         "next": [
