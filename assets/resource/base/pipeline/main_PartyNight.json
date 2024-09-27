@@ -1,6 +1,9 @@
 {
     "enter_activity_main": {
         "recognition": "TemplateMatch",
+        "interrupt": [
+            "check_reward0"
+        ],
         "timeout": 60000,
         "template": "partynight_main.png",
         "action": "Click",
@@ -64,6 +67,7 @@
         "recognition": "OCR",
         "expected": "開始",
         "action": "Click",
+        "pre_delay": 2000,
         "post_delay": 3000,
         "next": [
             "select_arthur_PartyNight"
@@ -77,7 +81,7 @@
             101,
             34
         ],
-        "expected": "歌姬亞瑟",
+        "expected": "歌姬",
         "action": "Click",
         "post_delay": 500,
         "next": [
@@ -124,13 +128,16 @@
         "template": "confirm_skip.png",
         "action": "Click",
         "threshold": 0.9,
+        "pre_delay": 1000,
+        "post_delay": 2000,
         "next": [
-            "activity_InPartyNight",
-            "finalBattle_PartyNight"
+            "finalBattle_PartyNight",
+            "activity_InPartyNight"
         ]
     },
     "finalBattle_PartyNight": {
         "recognition": "TemplateMatch",
+        "timeout": 90000,
         "template": "准备作战.png",
         "roi": [
             816,
@@ -146,6 +153,7 @@
         ]
     },
     "autoBattle_PartyNight": {
+        "timeout": 120000,
         "recognition": "TemplateMatch",
         "template": "auto.png",
         "roi": [
@@ -154,9 +162,11 @@
             276,
             156
         ],
+        "post_wait_freezes": 3000,
         "action": "Click",
         "next": [
-            "return_to_main"
+            "return_to_main",
+            "finalBattle_PartyNight"
         ]
     },
     "alreadyAuto_PartyNight": {
@@ -174,6 +184,40 @@
         "next": [
             "press_confirm_button",
             "alreadyAuto_PartyNight"
+        ]
+    },
+    "check_reward0": {
+        "recognition": "OCR",
+        "expected": "領取",
+        "roi": [
+            310,
+            564,
+            670,
+            156
+        ],
+        "action": "Click",
+        "post_wait_freezes": 2000,
+        "pre_wait_freezes": 2000,
+        "next": [
+            "check_accept_reward"
+        ]
+    },
+    "check_accept_reward": {
+        "recognition": "OCR",
+        "expected": [
+            "恭喜"
+        ],
+        "action": "Click",
+        "target": [
+            624,
+            457,
+            1,
+            1
+        ],
+        "pre_wait_freezes": 1000,
+        "post_wait_freezes": 1000,
+        "next": [
+            "check_homepage"
         ]
     }
 }

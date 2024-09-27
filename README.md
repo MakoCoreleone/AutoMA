@@ -48,12 +48,19 @@
 ## 问题反馈
 推荐以Issues方式反馈问题，请一并将解压目录下“debug/maa.log”上传至附件
 
+## 常见问题
+1.使用 MaaDebugger 或 MaaPicli 时弹窗报错，应用程序错误：应用程序无法正常启动( **0xc0000142** )
+
+<img alt="LOGO" src="https://github.com/MakoCoreleone/AutoMA/blob/main/error142.png"/>
+
+一般是电脑缺少某些运行库，请安装一下 [vc_redist](https://aka.ms/vs/17/release/vc_redist.x64.exe)
 
 
 > [!WARNING]  
 > * 对于 **mumu模拟器** 用户，必须**关闭**  其他->后台挂机时保活运行 
 > * 请先**在模拟器中手动过一次大富翁**，排除首次运行时弹出的页面导致的脚本卡死,如果懒得打，在跳过所有剧情后，重启游戏并放弃返回活动页面后，就可以开始使用本脚本。
 
+## 初次使用
 初次使用按照终端显示的文本操作：
 
 1. 选择ADB，通常选择自动查找（Auto detect）后选择正在使用的模拟器。如果出现问题，也可以手动输入ADB的绝对路径和端口。
