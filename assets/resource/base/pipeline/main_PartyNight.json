@@ -114,7 +114,8 @@
         "template": "skip.png",
         "action": "Click",
         "next": [
-            "confirm_skip"
+            "confirm_skip",
+            "activity_InPartyNight"
         ]
     },
     "confirm_skip": {

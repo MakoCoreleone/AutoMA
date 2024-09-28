@@ -8,6 +8,7 @@
         "next": [
             "confirmItem_InPartyNight",
             "selectBuff_InPartyNight",
+            "selection_InPartNight",
             "checkNullDice_InPartyNight",
             "checkRedDice_InPartyNight",
             "useItemForFa_InPartyNight",
@@ -144,7 +145,12 @@
             "InPartyNight\\道具卡2.png",
             "InPartyNight\\道具卡3.png",
             "InPartyNight\\道具卡4.png",
-            "InPartyNight\\道具卡5.png"
+            "InPartyNight\\道具卡5.png",
+            "InPartyNight\\道具卡6.png",
+            "InPartyNight\\道具卡7.png",
+            "InPartyNight\\道具卡8.png",
+            "InPartyNight\\道具卡9.png",
+            "InPartyNight\\道具卡10.png"
         ],
         "roi": [
             155,
@@ -236,7 +242,26 @@
         "recognition": "TemplateMatch",
         "template": "skip.png",
         "next": [
-            "skip"
+            "skip",
+            "activity_InPartyNight"
+        ]
+    },
+    "selection_InPartNight": {
+        "recognition": "OCR",
+        "expected": [
+            "可以打包",
+            "漂亮的大姐姐"
+        ],
+        "roi": [
+            274,
+            162,
+            755,
+            365
+        ],
+        "threshold": 0.9,
+        "action": "Click",
+        "next": [
+            "activity_InPartyNight"
         ]
     },
     "final_InPartyNight": {
