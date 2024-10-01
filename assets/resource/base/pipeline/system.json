@@ -49,7 +49,6 @@
             150
         ],
         "pre_wait_freezes": 2000,
-        "pre_delay": 2000,
         "template": "home.png",
         "action": "Click",
         "next": [

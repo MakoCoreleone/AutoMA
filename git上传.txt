@@ -1,0 +1,8 @@
+# 提交修改
+git add .
+git commit -m "XX 新功能"
+git push origin HEAD -u
+
+# CI 检测到 tag 会自动进行发版
+git tag v1.0.0
+git push origin v1.0.0

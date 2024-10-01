@@ -1,7 +1,8 @@
 {
     "start_once_PartyNight": {
         "interrupt": [
-            "check_switch"
+            "check_switch",
+            "check_mail"
         ],
         "pre_wait_freezes": 500,
         "next": [
