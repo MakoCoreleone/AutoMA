@@ -1,0 +1,19 @@
+{
+    "ultimate_party_night": {
+        "interrupt": [
+            "start_once_PartyNight",
+            "check_mail",
+            "check_switch"
+        ],
+        "pre_delay": 3000,
+        "post_delay": 10000,
+        "next": "stop_ultimate"
+    },
+    "stop_ultimate": {
+        "timeout": 5000,
+        "recognition": "OCR",
+        "expected": "丸辣!!!!",
+        "action": "DoNothing",
+        "next": []
+    }
+}

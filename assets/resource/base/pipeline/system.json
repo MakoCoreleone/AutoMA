@@ -3,6 +3,7 @@
         "recognition": "OCR",
         "expected": "確定",
         "timeout": 600000,
+        "interrupt": "check_mail",
         "pre_wait_freezes": 2000,
         "post_wait_freezes": 2000,
         "action": "Click",
@@ -81,6 +82,24 @@
             0,
             0,
             0
+        ]
+    },
+    "check_mail": {
+        "recognition": "TemplateMatch",
+        "template": "mail.png",
+        "action": "Click",
+        "target": [
+            44,
+            32,
+            1,
+            1
+        ],
+        "pre_wait_freezes": 1000,
+        "roi": [
+            11,
+            5,
+            316,
+            53
         ]
     }
 }

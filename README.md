@@ -22,6 +22,9 @@
   若确定自己的电脑是 arm 架构，请下载 AutoMA-win-aarch64-vXXX.zip
   
   解压后运行 MaaPiCli.exe 即可
+
+## 投喂地址
+* 爱发电 https://afdian.com/a/MakoCoreleone
   
 ### macOS
   若使用 Intel 处理器，请下载 AutoMA-macos-x86_64-vXXX.zip
