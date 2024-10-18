@@ -126,6 +126,7 @@
         "threshold": 0.85,
         "timeout": 300000,
         "rate_limit": 5000,
+        "post_wait_freezes": 8000,
         "roi": [
             1031,
             1,
@@ -183,6 +184,8 @@
     "wait_battlewin_exw": {
         "recognition": "TemplateMatch",
         "template": "ExcaliburWar/win.png",
+        "on_error": "start_pvp_exw",
+        "timeout": 30000,
         "roi": [
             474,
             618,
@@ -193,8 +196,7 @@
         "post_wait_freezes": 3000,
         "action": "Click",
         "next": [
-            "check_result_exw",
-            "start_pvp_exw"
+            "check_result_exw"
         ]
     },
     "check_result_exw": {
@@ -219,7 +221,8 @@
             "confirm_reward_exw",
             "check_treasurebox_exw",
             "return_mainpage_exw",
-            "start_pvp_exw"
+            "start_pvp_exw",
+            "check_result_exw"
         ]
     },
     "confirm_reward_exw": {
@@ -248,7 +251,7 @@
     "check_treasurebox_exw": {
         "recognition": "TemplateMatch",
         "template": "ExcaliburWar/full_treasurebox.png",
-        "threshold": 0.9,
+        "threshold": 0.95,
         "roi": [
             216,
             521,
@@ -344,7 +347,13 @@
             "drop_litter_exw",
             "use_nbbox_exw"
         ],
-        "action": "DoNothing",
+        "action": "Click",
+        "target": [
+            1061,
+            583,
+            0,
+            0
+        ],
         "next": [
             "finish_treasurebox_exw"
         ]
@@ -381,7 +390,8 @@
             "ExcaliburWar/120A.png",
             "ExcaliburWar/120B.png"
         ],
-        "threshold": 0.9,
+        "threshold": 0.95,
+        "interrupt": "treasurebox_end_exw",
         "roi": [
             994,
             149,
@@ -399,7 +409,7 @@
         "recognition": "TemplateMatch",
         "template": "ExcaliburWar/confirm_drop.png",
         "pre_wait_freezes": 500,
-        "threshold": 0.9,
+        "threshold": 0.85,
         "roi": [
             185,
             179,
@@ -446,7 +456,7 @@
     },
     "use_nbbox_exw": {
         "recognition": "TemplateMatch",
-        "threshold": 0.9,
+        "threshold": 0.95,
         "template": [
             "ExcaliburWar/180A.png",
             "ExcaliburWar/180B.png",
