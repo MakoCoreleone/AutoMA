@@ -14,6 +14,14 @@
         }
     ],
     "task": [
+        // {
+        //     "name": "刷1次派对前夜 （务必解锁派对前夜功能后回到主界面开始运行,使用前请看readme!）",
+        //     "entry": "start_once_PartyNight"
+        // },
+        // {
+        //     "name": "无限刷派对前夜 （务必解锁派对前夜功能后回到主界面开始运行,使用前请看readme!）",
+        //     "entry": "ultimate_party_night"
+        // },
         {
             "name": "刷pvp宝箱。（只开180/240体的箱子，请自备足够的体力，脚本会一直刷到体力榨干，回到主界面开始运行,使用前请看readme!）",
             "entry": "start_excaliburwar_pvp"

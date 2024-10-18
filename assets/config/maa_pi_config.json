@@ -1,33 +1,26 @@
 {
-    "controller": {
-        "name": "桌面端",
-        "type": "Win32"
-    },
-    "adb": {
-        "adb_path": "E:/llyx/Games/MuMu Player 12/shell/adb.exe",
-        "address": "127.0.0.1:16384",
-        "config": {
-            "extras": {
-                "mumu": {
-                    "enable": true,
-                    "index": 0,
-                    "path": "E:/llyx/Games/MuMu Player 12"
-                }
-            }
-        }
-    },
-    "resource": "官服",
-    "task": [
+    "controller": [
         {
-            "name": "普通任务",
-            "option": []
-        },
-        {
-            "name": "普通任务",
-            "option": []
+            "name": "模拟器",
+            "type": "Adb"
         }
     ],
-    "win32": {
-        "hwnd": "0000000000010a24"
-    }
+    "resource": [
+        {
+            "name": "台服",
+            "path": [
+                "{PROJECT_DIR}/resource/base"
+            ]
+        }
+    ],
+    "task": [
+        {
+            "name": "刷1次派对前夜 （务必解锁派对前夜功能后回到主界面开始运行,使用前请看readme!）",
+            "entry": "start_once_PartyNight"
+        },
+        {
+            "name": "无限刷派对前夜 （务必解锁派对前夜功能后回到主界面开始运行,使用前请看readme!）",
+            "entry": "ultimate_party_night"
+        }
+    ]
 }
