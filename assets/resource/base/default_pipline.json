@@ -6,9 +6,5 @@
             "check_homepage"
         ],
         "timeout": 30000
-    },
-    "TemplateMatch": {
-        "recognition": "TemplateMatch",
-        "threshold": 0.85
     }
 }
