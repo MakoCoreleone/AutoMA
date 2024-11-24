@@ -1,12 +1,12 @@
 {
-    "start_V4_pvp": {
+    "start_v4p_pvp": {
         "pre_wait_freezes": 1000,
         "next": [
-            "check_homepage_v4",
-            "check_mainpage_v4"
+            "check_homepage_v4p",
+            "check_mainpage_v4p"
         ]
     },
-    "check_homepage_v4": {
+    "check_homepage_v4p": {
         "recognition": "TemplateMatch",
         "template": "homepage_exw.png",
         "roi": [
@@ -18,10 +18,10 @@
         "action": "DoNothing",
         "pre_wait_freezes": 1000,
         "next": [
-            "go_mainpage_v4"
+            "go_mainpage_v4p"
         ]
     },
-    "go_mainpage_v4": {
+    "go_mainpage_v4p": {
         "recognition": "TemplateMatch",
         "template": "go_mainpage_v4.png",
         "roi": [
@@ -34,10 +34,10 @@
         "pre_wait_freezes": 500,
         "post_wait_freezes": 500,
         "next": [
-            "click_v4pvp_v4"
+            "click_v4pvp_v4p"
         ]
     },
-    "click_v4pvp_v4": {
+    "click_v4pvp_v4p": {
         "recognition": "TemplateMatch",
         "template": "v4pvp_btn.png",
         "roi": [
@@ -50,10 +50,10 @@
         "pre_wait_freezes": 500,
         "post_wait_freezes": 1000,
         "next": [
-            "check_mainpage_v4"
+            "check_mainpage_v4p"
         ]
     },
-    "check_mainpage_v4": {
+    "check_mainpage_v4p": {
         "recognition": "TemplateMatch",
         "template": "V4pvp/mainpage_v4pvp.png",
         "roi": [
@@ -65,10 +65,10 @@
         "pre_wait_freezes": 2000,
         "action": "DoNothing",
         "next": [
-            "select_rank_v4"
+            "select_rank_v4p"
         ]
     },
-    "select_rank_v4": {
+    "select_rank_v4p": {
         "recognition": "TemplateMatch",
         "template": "V4pvp/select_rank_v4.png",
         "roi": [
@@ -82,10 +82,10 @@
         "post_wait_freezes": 1000,
         "post_delay": 5000,
         "next": [
-            "start_pvp_v4"
+            "start_pvp_v4p"
         ]
     },
-    "start_pvp_v4": {
+    "start_pvp_v4p": {
         "recognition": "TemplateMatch",
         "template": "V4pvp/start_pvp.png",
         "threshold": 0.975,
@@ -101,15 +101,15 @@
         "post_delay": 500,
         "timeout": 180000,
         "next": [
-            "battle_v4",
-            "select_auto_v4"
+            "battle_v4p",
+            "select_auto_v4p"
         ],
         "on_error": [
-            "click_menu_v4",
-            "start_pvp_v4"
+            "click_menu_v4p",
+            "start_pvp_v4p"
         ]
     },
-    "battle_v4": {
+    "battle_v4p": {
         "recognition": "TemplateMatch",
         "template": "already_auto.png",
         "threshold": 0.85,
@@ -124,14 +124,14 @@
         ],
         "action": "DoNothing",
         "next": [
-            "wait_battlelose_v4",
-            "wait_battlewin_v4"
+            "wait_battlelose_v4p",
+            "wait_battlewin_v4p"
         ],
         "on_error": [
-            "click_menu_v4"
+            "click_menu_v4p"
         ]
     },
-    "select_auto_v4": {
+    "select_auto_v4p": {
         "recognition": "TemplateMatch",
         "template": "ExcaliburWar/auto.png",
         "roi": [
@@ -143,10 +143,10 @@
         "threshold": 0.85,
         "action": "Click",
         "next": [
-            "battle_v4"
+            "battle_v4p"
         ]
     },
-    "wait_battlelose_v4": {
+    "wait_battlelose_v4p": {
         "recognition": "TemplateMatch",
         "template": [
             "ExcaliburWar/lose_v4.png"
@@ -167,13 +167,13 @@
             31
         ],
         "next": [
-            "check_result_v4"
+            "check_result_v4p"
         ]
     },
-    "wait_battlewin_v4": {
+    "wait_battlewin_v4p": {
         "recognition": "TemplateMatch",
         "template": "ExcaliburWar/win.png",
-        "on_error": "start_pvp_v4",
+        "on_error": "start_pvp_v4p",
         "timeout": 30000,
         "roi": [
             474,
@@ -185,10 +185,10 @@
         "post_wait_freezes": 3000,
         "action": "Click",
         "next": [
-            "check_result_v4"
+            "check_result_v4p"
         ]
     },
-    "check_result_v4": {
+    "check_result_v4p": {
         "recognition": "OCR",
         "expected": "VS",
         "roi": [
@@ -207,15 +207,15 @@
         "pre_wait_freezes": 3000,
         "post_wait_freezes": 1000,
         "next": [
-            "confirm_result_v4",
-            "confirm_reward_v4",
-            "check_treasurebox_v4",
-            "return_mainpage_v4",
-            "start_pvp_v4",
-            "check_result_v4"
+            "confirm_result_v4p",
+            "confirm_reward_v4p",
+            "check_treasurebox_v4p",
+            "return_mainpage_v4p",
+            "start_pvp_v4p",
+            "check_result_v4p"
         ]
     },
-    "confirm_result_v4": {
+    "confirm_result_v4p": {
         "recognition": "TemplateMatch",
         "template": "V4pvp/confirm_result.png",
         "roi": [
@@ -226,15 +226,15 @@
         ],
         "action": "Click",
         "next": [
-            "confirm_reward_v4",
-            "check_treasurebox_v4",
-            "return_mainpage_v4",
-            "start_pvp_v4",
-            "check_result_v4",
-            "confirm_result_v4"
+            "confirm_reward_v4p",
+            "check_treasurebox_v4p",
+            "return_mainpage_v4p",
+            "start_pvp_v4p",
+            "check_result_v4p",
+            "confirm_result_v4p"
         ]
     },
-    "confirm_reward_v4": {
+    "confirm_reward_v4p": {
         "recognition": "OCR",
         "expected": [
             "恭喜"
@@ -253,11 +253,11 @@
             62
         ],
         "next": [
-            "check_treasurebox_v4",
-            "return_mainpage_v4"
+            "check_treasurebox_v4p",
+            "return_mainpage_v4p"
         ]
     },
-    "check_treasurebox_v4": {
+    "check_treasurebox_v4p": {
         "recognition": "TemplateMatch",
         "template": "ExcaliburWar/full_treasurebox.png",
         "threshold": 0.95,
@@ -277,14 +277,14 @@
         "pre_wait_freezes": 1500,
         "post_wait_freezes": 1000,
         "next": [
-            "use_treasurebox_v4"
+            "use_treasurebox_v4p"
         ]
     },
-    "return_mainpage_v4": {
+    "return_mainpage_v4p": {
         "recognition": "TemplateMatch",
         "template": "V4pvp/return_mainpage_v4.png",
         "interrupt": [
-            "treasurebox_end_v4"
+            "treasurebox_end_v4p"
         ],
         "roi": [
             646,
@@ -298,11 +298,11 @@
         "post_delay": 5000,
         "post_wait_freezes": 1000,
         "next": [
-            "return_mainpage_v4",
-            "start_pvp_v4"
+            "return_mainpage_v4p",
+            "start_pvp_v4p"
         ]
     },
-    "click_menu_v4": {
+    "click_menu_v4p": {
         "recognition": "TemplateMatch",
         "template": "ExcaliburWar/menu.png",
         "timeout": 60000,
@@ -316,11 +316,11 @@
         "action": "Click",
         "post_delay": 500,
         "next": [
-            "confirm_quit_v4",
-            "click_menu_v4"
+            "confirm_quit_v4p",
+            "click_menu_v4p"
         ]
     },
-    "confirm_quit_v4": {
+    "confirm_quit_v4p": {
         "recognition": "TemplateMatch",
         "template": "ExcaliburWar/quit_battle.png",
         "roi": [
@@ -333,10 +333,10 @@
         "pre_delay": 200,
         "post_delay": 200,
         "next": [
-            "press_confirmquit_v4"
+            "press_confirmquit_v4p"
         ]
     },
-    "press_confirmquit_v4": {
+    "press_confirmquit_v4p": {
         "recognition": "TemplateMatch",
         "template": "ExcaliburWar/win.png",
         "roi": [
@@ -350,14 +350,14 @@
         "post_wait_freezes": 1000,
         "post_delay": 6000,
         "next": [
-            "check_result_v4"
+            "check_result_v4p"
         ]
     },
-    "use_treasurebox_v4": {
+    "use_treasurebox_v4p": {
         "pre_wait_freezes": 2000,
         "interrupt": [
-            "drop_litter_v4",
-            "use_nbbox_v4"
+            "drop_litter_v4p",
+            "use_nbbox_v4p"
         ],
         "action": "Click",
         "target": [
@@ -367,10 +367,10 @@
             0
         ],
         "next": [
-            "finish_treasurebox_v4"
+            "finish_treasurebox_v4p"
         ]
     },
-    "finish_treasurebox_v4": {
+    "finish_treasurebox_v4p": {
         "recognition": "TemplateMatch",
         "template": "ExcaliburWar/Nullbox.png",
         "roi": [
@@ -390,20 +390,22 @@
             28
         ],
         "next": [
-            "start_pvp_v4",
-            "check_mainpage_v4"
+            "start_pvp_v4p",
+            "check_mainpage_v4p"
         ]
     },
-    "drop_litter_v4": {
+    "drop_litter_v4p": {
         "recognition": "TemplateMatch",
         "template": [
             "ExcaliburWar/60A.png",
             "ExcaliburWar/60B.png",
             "ExcaliburWar/120A.png",
-            "ExcaliburWar/120B.png"
+            "ExcaliburWar/120B.png",
+            "ExcaliburWar/180A.png",
+            "ExcaliburWar/180B.png"
         ],
         "threshold": 0.95,
-        "interrupt": "treasurebox_end_v4",
+        "interrupt": "treasurebox_end_v4p",
         "roi": [
             994,
             149,
@@ -414,10 +416,10 @@
         "post_wait_freezes": 1000,
         "action": "Click",
         "next": [
-            "confirm_droplitter_v4"
+            "confirm_droplitter_v4p"
         ]
     },
-    "confirm_droplitter_v4": {
+    "confirm_droplitter_v4p": {
         "recognition": "TemplateMatch",
         "template": "ExcaliburWar/confirm_drop.png",
         "pre_wait_freezes": 500,
@@ -430,11 +432,11 @@
         ],
         "action": "Click",
         "next": [
-            "press_confirmbtn_v4",
-            "confirm_droplitter_v4"
+            "press_confirmbtn_v4p",
+            "confirm_droplitter_v4p"
         ]
     },
-    "press_confirmbtn_v4": {
+    "press_confirmbtn_v4p": {
         "pre_wait_freezes": 500,
         "action": "Click",
         "target": [
@@ -444,10 +446,10 @@
             38
         ],
         "next": [
-            "treasurebox_end_v4"
+            "treasurebox_end_v4p"
         ]
     },
-    "treasurebox_end_v4": {
+    "treasurebox_end_v4p": {
         "recognition": "OCR",
         "expected": [
             "恭喜"
@@ -466,12 +468,10 @@
             62
         ]
     },
-    "use_nbbox_v4": {
+    "use_nbbox_v4p": {
         "recognition": "TemplateMatch",
         "threshold": 0.95,
         "template": [
-            "ExcaliburWar/180A.png",
-            "ExcaliburWar/180B.png",
             "ExcaliburWar/240A.png",
             "ExcaliburWar/240B.png"
         ],
@@ -485,10 +485,10 @@
         "post_wait_freezes": 1000,
         "action": "Click",
         "next": [
-            "confirm_usenbbox_v4"
+            "confirm_usenbbox_v4p"
         ]
     },
-    "confirm_usenbbox_v4": {
+    "confirm_usenbbox_v4p": {
         "pre_wait_freezes": 500,
         "action": "Click",
         "target": [
@@ -498,7 +498,7 @@
             32
         ],
         "next": [
-            "treasurebox_end_v4"
+            "treasurebox_end_v4p"
         ]
     }
 }
